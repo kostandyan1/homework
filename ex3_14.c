@@ -27,11 +27,13 @@ int main() {
     }
 
     i = 0;
-    k = 0;
-    while (i < j - 1) {
-        while (k < j - i - 1) {
+    while (i < j - 1)
+    {
+        k = 0;
+        while (k < j - i - 1)
+        {
             int diff = 0;
-            while (str[index[k] + diff] == str[index[k + 1] + diff] && str[index[k] + diff] == '\0')
+            while (str[index[k] + diff] == str[index[k + 1] + diff] && str[index[k] + diff] != '\0') 
                 diff++;
             if (str[index[k] + diff] > str[index[k + 1] + diff]) {
                 temp = index[k];
