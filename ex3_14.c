@@ -26,14 +26,13 @@ int main() {
         }
     }
 
-    for (i = 0; i < j - 1; i++) {
-        for (k = 0; k < j - i - 1; k++) {
+    i = 0;
+    k = 0;
+    while (i < j - 1) {
+        while (k < j - i - 1) {
             int diff = 0;
-            while (str[index[k] + diff] == str[index[k + 1] + diff]) {
-                if (str[index[k] + diff] == '\0')
-                    break;
+            while (str[index[k] + diff] == str[index[k + 1] + diff] && str[index[k] + diff] == '\0')
                 diff++;
-            }
             if (str[index[k] + diff] > str[index[k + 1] + diff]) {
                 temp = index[k];
                 index[k] = index[k + 1];
@@ -43,7 +42,9 @@ int main() {
                 length[k] = length[k + 1];
                 length[k + 1] = temp;
             }
+            k++;
         }
+        i++;
     }
 
     for (i = 0; i < j; i++) {
