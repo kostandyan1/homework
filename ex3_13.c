@@ -2,13 +2,14 @@
 
 int main()
 {
-    char str[100] = "eeejjjeeejjjeeeje  iiiiiiiiifi  aaabbbaaa  ";
+    char str[100] = "aaaba eeejjjeeejjjeeeje  iiiiiiiiifi  aaabbbaaa  ";
     int index;
     int count_vows = 0;
     int max_vows = 0;
     int max_index[10];
     int i = 0;
     int j = 0;
+    int c = 0;
 
     while (str[i])
     {
@@ -23,12 +24,13 @@ int main()
                 count_vows++;
             i++;
         }
-        if (count_vows >= max_vows)
+        if (count_vows >= max_vows && c > 0)
         {
             max_vows = count_vows;
             max_index[j] = index;
             j++;
         }
+        c++;
         i++;
     }
     int k = 0;
