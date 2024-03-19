@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    char str[] = "axaxbxcxdxexfxgx";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int i = 0;
     int j = 0;
 

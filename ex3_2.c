@@ -2,7 +2,9 @@
 
 int main()
 {
-    char str[] = "ab123ab456ab789ab";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int i;
     int j;
     

@@ -2,7 +2,9 @@
 
 int main()
 {
-    char str[100] = "   12 12345 123 1234567 1234 ";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int index[10];
     int length[10];
     int len;

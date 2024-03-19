@@ -2,7 +2,9 @@
 
 int main() 
 {
-    char str[]= "12:3:321:6:";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int i;
     int j;
     int count;

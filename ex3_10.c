@@ -2,7 +2,9 @@
 
 int main()
 {
-    char str[25] = "  12345  12345 abc dfg";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int i = 0;
     int start;
     int end;

@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    char str[100] = "   abcd abcb abcc abca";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int index[10];
     int length[10];
     int len;

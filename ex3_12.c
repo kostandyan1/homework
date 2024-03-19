@@ -2,7 +2,9 @@
 
 int	main(void)
 {
-	char	str[100] = "   Hello    world!   dd    ddddd     ggg";
+	char str[100];
+    printf("Enter string: ");
+    gets(str);
 
 	int i, j, temp;
 	i = 0;

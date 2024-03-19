@@ -2,7 +2,9 @@
 
 int main()
 {
-    char str[10] = "aabbccddee";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int i = 0;
     int c;
 
@@ -18,5 +20,7 @@ int main()
             printf("%c", str[i]);
             i++;
         }
-    }    
+    }  
+    printf("\n");
+    return (0);  
 }

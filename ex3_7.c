@@ -1,26 +1,29 @@
 #include <stdio.h>
 
-int main()
-{
-    char str[10] = "aabbccddee";
-    char str_new[10];
+int main() {
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+
+    char str_new[100];
     int i = 0;
     int j = 0;
-    int c;
+    int k;
 
-    while(str[i])
-    {
-        c = 0;
-        while(c <= i && str[c] != str[i])
-            c++;
-        if (c != i)
-        {
-            str_new[j] = str[i];
-            j++;
+    while (str[i]) {
+        k = 0;
+        int count = 0;
+        while (str[k]) {
+            if (i != k && str[i] == str[k])
+                count++;
+            k++;
         }
-        i++;          
-    }  
-    str_new[j] = '\0';  
-    printf("%s", str_new);
-    return (0);
+        if (count == 0) {
+            str_new[j++] = str[i];
+            putchar(str[i]);
+        }
+        i++;
+    }
+    printf("\n");
+    return 0;
 }

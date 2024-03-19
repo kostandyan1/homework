@@ -2,7 +2,9 @@
 
 int main()
 {
-    char str[12] = "(a+b)*(c+d)";
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
     int i = 0;
     int count = 0;
 
