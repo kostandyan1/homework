@@ -31,7 +31,8 @@ int main() {
         i++;
     }
 
-    for (int k = 0; k < j; k++) {
+    int k = 0;
+    while(k < j) {
         if (vows[k] == max_vows) {
             int c = max_index[k];
             while (str[c] && str[c] != ' ') {
@@ -40,6 +41,7 @@ int main() {
             }
             printf("\n");
         }
+        k++;
     }
     return 0;
 }
