@@ -14,6 +14,11 @@ int main()
             count += 1;
         else if (str[i] == ')')
             count -= 1;
+        if (count < 0)
+        {
+            printf("False");
+            return (0);
+        }
         i++;
     }    
     if (count == 0)
